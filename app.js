@@ -25,13 +25,12 @@ console.log(`Socket.IO API up and running on port: ${portSocketIO}!`);
      if(socket.handshake.query.socketId === socketId){
       function intervalFunction() {
         percentage++;
-        console.log(`Socket.IO begin process ${percentage}`)
+        console.log(`Socket.IO begin process ${percentage} or total ${total}`)
         app.io.to('personId-'+socketId).emit('progress', {percentage})
         if (percentage === total) {
           console.log(`Socket.IO finish process`)
           app.io.to('personId-'+socketId).emit('finish', {total, errors, success, fileName})
           clearInterval(this);
-          total = 0
           percentage = 0
         }
       }
