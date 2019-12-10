@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const portSocketIO = 5000;
+const portSocketIO = process.env.PORT ||5000;
 const server = require('http').createServer(app).listen(portSocketIO);
 
 app.io = require('socket.io')(server, {'transports': ['websocket', 'polling']})

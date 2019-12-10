@@ -13,7 +13,8 @@
     "socket.io": "^2.3.0"
   },
   "keywords": [],
-  "author": "",
+  "author": "AhCamargo <andre.camargo500@gmail.com>",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": "https://github.com/AhCamargo/backend-box-transfer.git"
 }
