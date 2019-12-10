@@ -31,6 +31,7 @@ console.log(`Socket.IO API up and running on port: ${portSocketIO}!`);
           console.log(`Socket.IO finish process`)
           app.io.to('personId-'+socketId).emit('finish', {total, errors, success, fileName})
           clearInterval(this);
+          total = 0
         }
       }
       setInterval(intervalFunction, 1000);
